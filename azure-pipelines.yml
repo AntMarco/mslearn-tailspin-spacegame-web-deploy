@@ -65,11 +65,11 @@ stages:
     - publish: '$(Build.ArtifactStagingDirectory)'
       artifact: drop
 
-- stage: 'Deploy'
+- stage: 'Desarrollo'
   displayName: 'Deploy the web application'
   dependsOn: Build
   jobs:
-  - deployment: Deploy
+  - deployment: Desarrollo
     pool:
       vmImage: 'ubuntu-20.04'
     environment: dev
